@@ -1121,13 +1121,10 @@ On the other hand, the user of \code{copy} already knows (or can find out) how b
 \section{External Variables and Scope}
 
 
-The variables in \code{main}, such as line, longest, etc., are private or local to \code{main}.
-Because they are declared within \code{main}, no other function can have direct access to them.
-The same is true of the variables in other functions; for example, the variable \code{i} in \code{getline} is unrelated to the \code{i} in \code{copy}.
 Each local variable in a function comes into existence only when the function is called, and disappears when the function is exited.
 This is why such variables are usually known as automatic variables, following terminology in other languages.
 We will use the term \emph{automatic} henceforth to refer to these local variables.
-(Chapter 4 discusses the \code{static} storage class, in which local variables do retain their values between calls.)
+Chapter \ref{sec:functions} discusses the \code{static} storage class, in which local variables do retain their values between calls.
 
 Because automatic variables come and go with function invocation, they do not retain their values from one call to the next, and must be explicitly set upon each entry.
 If they are not set, they will contain garbage.
